@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode url="~/Default.aspx" title="Courses" description="Course catalogue">
+    <siteMapNode url="~/Course.aspx" title="Course" description="Course details and discussion">
+      <siteMapNode url="~/Member/Lesson.aspx" title="Lesson" description="Lesson content" />
+      <siteMapNode url="~/Member/Quiz.aspx" title="Quiz" description="Self-assessment quiz" />
+      <siteMapNode url="~/Member/Certificate.aspx" title="Certificate" description="Certificate of completion" />
+    </siteMapNode>
+    <siteMapNode url="~/Member/Dashboard.aspx" title="My Dashboard" description="Learner progress and profile" />
+    <siteMapNode url="~/About.aspx" title="About" description="About the project and team" />
+    <siteMapNode url="~/Login.aspx" title="Sign in" />
+    <siteMapNode url="~/Register.aspx" title="Join" />
+    <siteMapNode url="~/Admin/Courses.aspx" title="Manage Courses" description="Administrator: courses">
+      <siteMapNode url="~/Admin/Lessons.aspx" title="Manage Lessons" />
+      <siteMapNode url="~/Admin/Questions.aspx" title="Manage Quizzes" />
+      <siteMapNode url="~/Admin/Users.aspx" title="Manage Users" />
+      <siteMapNode url="~/Admin/Stats.aspx" title="Statistics" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

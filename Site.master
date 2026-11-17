@@ -1,0 +1,48 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Onyx Learn is a web-based learning system with courses, lessons, quizzes and discussions." />
+<title>Onyx Learn</title>
+<link href="~/Site.css" rel="stylesheet" />
+<link href="~/Media/covers/default.svg" rel="icon" type="image/svg+xml" />
+</head>
+<body>
+<form id="form1" runat="server">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<a runat="server" href="~/Default.aspx" class="logo">ONYX<span>LEARN</span></a>
+<nav aria-label="Main">
+<a runat="server" href="~/Default.aspx">Courses</a>
+<a runat="server" href="~/About.aspx">About</a>
+<asp:PlaceHolder ID="phGuest" runat="server">
+<a runat="server" href="~/Login.aspx">Sign in</a>
+<a runat="server" href="~/Register.aspx" class="btn">Join</a>
+</asp:PlaceHolder>
+<asp:PlaceHolder ID="phUser" runat="server">
+<a runat="server" href="~/Member/Dashboard.aspx">My Dashboard</a>
+</asp:PlaceHolder>
+<asp:PlaceHolder ID="phAdmin" runat="server">
+<a runat="server" href="~/Admin/Courses.aspx">Manage Courses</a>
+<a runat="server" href="~/Admin/Lessons.aspx">Lessons</a>
+<a runat="server" href="~/Admin/Questions.aspx">Quizzes</a>
+<a runat="server" href="~/Admin/Users.aspx">Users</a>
+<a runat="server" href="~/Admin/Stats.aspx">Stats</a>
+</asp:PlaceHolder>
+<asp:LinkButton ID="lnkOut" runat="server" OnClick="lnkOut_Click" CausesValidation="false">Sign out</asp:LinkButton>
+</nav>
+</header>
+<main id="main">
+<nav id="navCrumbs" runat="server" class="crumbs" aria-label="Breadcrumb"><asp:SiteMapPath ID="smp" runat="server" PathSeparator=" / " SkipLinkText="" /></nav>
+<asp:ContentPlaceHolder ID="Main" runat="server" />
+</main>
+<footer>
+<p>&copy; 2026 Onyx Learn &middot; CT050-3-2-WAPP &middot; Asia Pacific University of Technology and Innovation</p>
+<p><a runat="server" href="~/Default.aspx">Courses</a> &middot; <a runat="server" href="~/About.aspx">About &amp; team</a></p>
+</footer>
+</form>
+<script src="<%= ResolveUrl("~/Site.js") %>"></script>
+</body>
+</html>
